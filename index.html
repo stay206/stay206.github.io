@@ -89,7 +89,9 @@
                 <p style="color:black;">美化了网页UI</p>
 	</h2>        
         
-	<em><script>
+	<em>
+	<li><b>此页创建时间：</b><span class="hui">2023/7/14</span>&nbsp;&nbsp;<b>最后更新：</b><span id="lastUpdated"></span>.</li>
+	<script>
                 //最后更新网页时间
                 const lastUpdatedElement = document.getElementById('lastUpdated');
                 const lastUpdatedDate = new Date(document.lastModified);
@@ -103,8 +105,7 @@
                 };
                 const formattedDate = lastUpdatedDate.toLocaleDateString('zh-CN', options);
                 lastUpdatedElement.innerHTML = formattedDate
-            </script>
-	<li><b>此页创建时间：</b><span class="hui">2023/7/14</span>&nbsp;&nbsp;<b>最后更新：</b><span id="lastUpdated"></span>.</li></em>
+            </script></em>
         <br>
         手机端图片加载可能比较慢，无需等待可直接使用<br>
         慢速更新网站，如果您有我没有列出或失效的网站，请加入QQ频道联系我吧！
