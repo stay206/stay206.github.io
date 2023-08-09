@@ -141,3 +141,15 @@ a:hover {
     color: #Fff;
     background-color: var(--a_hover_background_color);
 }
+.ac_coupon-wrap {
+    height: 0;
+    padding-top: 15.16%;
+    position: relative;
+    .ac_coupon-content {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+}
