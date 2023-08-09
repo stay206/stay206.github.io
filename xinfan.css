@@ -44,7 +44,7 @@ body {
     position: relative;
     width: 300px;
     height: 450px;
-    overflow: hidden;
+    overflow: auto;
     margin: 20px;
     background-color: var(--border-color);
     border-radius: 20px;
@@ -105,6 +105,7 @@ h1 {
     position: absolute;
     top: 380px;
     transition: 0.5s;
+    text-align: center;
 }
 
 .card:hover h1 {
