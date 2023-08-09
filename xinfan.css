@@ -33,6 +33,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+    flex-wrap: wrap;
 }
 
 .card {
@@ -43,7 +44,7 @@ body {
     position: relative;
     width: 300px;
     height: 450px;
-    overflow: scroll;
+    overflow: hidden;
     margin: 20px;
     background-color: var(--border-color);
     border-radius: 20px;
@@ -52,7 +53,7 @@ body {
     align-items: center;
     /* flex 子元素 纵向排列 */
     flex-direction: column;
-    flex-wrap: wrap;
+   
     /* 增加个阴影 */
     box-shadow: 0 0 30px #2c2c2c;
     /* 同意给字体价格颜色 */
