@@ -1,32 +1,149 @@
 <!DOCTYPE html>
 <html>
 		  <style>
-* {margin: 0; padding: 0;} 
-div { 
-margin: 20px; 
-} 
-ul { 
-list-style-type: none; 
-width: 500px; 
-} 
-h3 { 
-font: bold 20px/1.5 Helvetica, Verdana, sans-serif; 
-} 
-li img { 
-float: left; 
-margin: 0 15px 0 0; 
-} 
-li p { 
-font: 200 12px/1.5 Georgia, Times New Roman, serif; 
-} 
-li { 
-padding: 10px; 
-overflow: auto; 
-} 
-li:hover { 
-background: #eee; 
-cursor: pointer; 
+:root {
+    --background-color: #2c3e50;
+    --border-color: #7591AD;
+    --text-color: #34495e;
+    --color1: #EC3E27;
+    --color2: #fd79a8;
+    --color3: #0984e3;
+    --color4: #00b894;
+    --color5: #fdcb6e;
+    --color6: #e056fd;
+    --color7: #F97F51;
+    --color8: #BDC581;
+    --a_border_color: #86a3b3;
+    --h2_border_color: #8ea2b8;
+    --a_hover_background_color: #86a3b3;
+    --font_color: #e8f6fd;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+}
+
+.card {
+    /* flex布局下元素不按比例缩放 */
+    flex-shrink: 0;
+    flex-grow: 0;
+    position: relative;
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    margin: 20px;
+    background-color: var(--border-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* flex 子元素 纵向排列 */
+    flex-direction: column;
+    /* 增加个阴影 */
+    box-shadow: 0 0 30px #2c2c2c;
+    /* 同意给字体价格颜色 */
+    color: var(--font_color)
+}
+
+.photo {
+    position: absolute;
+    /* 默认为放大 */
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    border-radius: 0%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.photo::before {
+    /* 通过before增加渐变背景实现遮罩，让文字默认看起来清晰一些 */
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #333, transparent);
+}
+.card:hover .photo::before{
+    /* 缩小时隐藏 */
+    display: none;
+}
+
+.photo img {
+    /* 图片高宽均为100% */
+    /* 然后按照cover缩放，裁切长边 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover .photo {
+    /* 鼠标移上变小 */
+    width: 120px;
+    height: 120px;
+    top: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #111;
+}
+
+h1 {
+    position: absolute;
+    top: 380px;
+    transition: 0.5s;
+}
+
+.card:hover h1 {
+    position: absolute;
+    top: 170px;
+}
+
+h2 {
+    margin-top: 220px;
+    width: 80%;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--h2_border_color);
+}
+
+p {
+    width: 90%;
+    /* 段落缩进2个字符大小 */
+    text-indent: 2em;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+a {
+    color: var(--font_color);
+    text-decoration: none;
+    padding: 12px 36px;
+    border: 1px solid var(--a_border_color);
+    border-radius: 8px;
+}
+
+a:hover {
+    color: #Fff;
+    background-color: var(--a_hover_background_color);
+}
+
 </style>
 <head>
 		<title>墨云新番简表</title>
@@ -39,30 +156,37 @@ cursor: pointer;
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 <body>
-<div> 
-<ul> 
-<li> 
-<img src=<"http://lorempixum.com/100/100/nature/1" /> 
-<h3>Headline</h3> 
-<p>Lorem ipsum dolor sit amet...</p> 
-</li> 
-<li> 
-<img src=<"http://lorempixum.com/100/100/nature/2" /> 
-<h3>Headline</h3> 
-<p>Lorem ipsum dolor sit amet...</p> 
-</li> 
-<li> 
-<img src=<"http://lorempixum.com/100/100/nature/3" /> 
-<h3>Headline</h3> 
-<p>Lorem ipsum dolor sit amet...</p> 
-</li> 
-<li> 
-<img src=<"http://lorempixum.com/100/100/nature/4" /> 
-<h3>Headline</h3> 
-<p>Lorem ipsum dolor sit amet...</p> 
-</li> 
-</ul> 
-</div>
-
+    <!-- 开始 -->
+    <div class="card">
+        <div class="photo">
+            <img src="1.jpg">
+        </div>
+        <h1>马云 Jack Ma</h1>
+        <h2>阿里巴巴 alibaba.com</h2>
+        <p>马云，男，汉族，中共党员，1964年9月10日生于浙江省杭州市，祖籍浙江省嵊州市谷来镇。</p>
+        <a href="#">了解更多</a>
+    </div>
+    <div class="card">
+        <div class="photo">
+            <img src="2.jpg">
+        </div>
+        <h1>马化腾 Pony</h1>
+        <h2>腾讯 tencent.com</h2>
+        <p>马化腾，汉族，1971年10月29日生于广东省东方县八所港，广东省汕头市潮南区人。</p>
+        <a href="#">了解更多</a>
+    </div>
+    <div class="card">
+        <div class="photo">
+            <img src="3.jpg">
+        </div>
+        <h1>刘强东 Richard Liu</h1>
+        <h2>京东 jd.com</h2>
+        <p>刘强东，男，汉族，1973年3月10日生（另一说法：1974年2月14日），江苏宿迁人，祖籍湖南湘潭。</p>
+        <a href="#">了解更多</a>
+    </div>
 </body>
+
+————————————————
+版权声明：本文为CSDN博主「王同学要努力」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/m0_46374969/article/details/111840172
 </html>
