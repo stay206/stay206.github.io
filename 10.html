@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023年10月新番</title>
+    <meta name=keywords content="">
+    <link rel="stylesheet" href="document.css">
+</head>
+<body>
+    <div class="anime-grid-box"></div>
+    <div class="more-link-box">
+        <a href="./"></a>
+    </div>
+    <footer>
+        <a href="https://stay206.github.io/portfolio-master/portfolio.html" target="_blank">墨云</a>
+        <a href="https://pd.qq.com/s/7opyn93fe" target="_blank">QQ频道</a>
+        <a href="https://github.com/stay206" target="_blank">GitHub</a>
+        <span>动画信息来自 <a href="https://bgm.tv/" target="_blank">番组计划</a></span>
+    </footer>
+    <script src="anime-grid2.js"></script>
+<script>
+const typeTexts = `
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+`;
+new AnimeGrid({
+    el: document.querySelector('.anime-grid-box'),
+    title: '2023年10月新番',
+    urlExt: '/ex.html',
+    key: 'margiconch-animes-grid-ex',
+    typeTexts,
+    col: 6,
+    row: 10,
+})
+</script>
+</body>
+</html>
