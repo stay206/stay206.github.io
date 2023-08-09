@@ -103,9 +103,9 @@ class AnimeGrid {
 
         this.fontHeight = fontHeight;
 
-        const width = contentWidth + bodyMargin * 2;
-        const height = contentHeight + bodyMargin * 2 + titleHeight;
-        const scale = 2;
+        const width = contentWidth + bodyMargin * 4;
+        const height = contentHeight + bodyMargin * 4 + titleHeight;
+        const scale = 4;
 
 
         canvas.width = width * scale;
