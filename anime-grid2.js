@@ -118,9 +118,9 @@ class AnimeGrid {
         );
 
         const copyRightText = [
-            'lab.magiconch.com/anime-grid' + urlExt,
-            '@卜卜口',
-            '神奇海螺试验场',
+            '' + urlExt,
+            '',
+            '墨云',
             '动画信息来自番组计划',
             '禁止商业、盈利用途'
         ].join(' · ');
