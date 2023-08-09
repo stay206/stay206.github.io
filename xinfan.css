@@ -43,7 +43,7 @@ body {
     position: relative;
     width: 300px;
     height: 450px;
-    overflow: hidden;
+    overflow: scroll;
     margin: 20px;
     background-color: var(--border-color);
     border-radius: 20px;
